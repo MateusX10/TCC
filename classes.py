@@ -159,7 +159,7 @@ class Filmes:
 
         self.id = id
 
-        self.titutlo = titulo
+        self.titulo = titulo
 
         self.genero = genero
 
@@ -210,7 +210,7 @@ class Filmes:
 
 class Series:
 
-    def __init__(self, d, titulo, genero, numero_episidios, numero_temporadas, ano_lancamento, diretor, sinopse, elenco, classificacao, duracao, average_rate, popularidade, link_trailer, poster):
+    def __init__(self, id, titulo, genero, numero_episidios, numero_temporadas, ano_lancamento, diretor, sinopse, elenco, classificacao, duracao, average_rate, popularidade, link_trailer, poster):
 
 
         self.id = id
@@ -231,7 +231,7 @@ class Series:
         self.diretor = diretor
 
 
-        self.sinoipse = sinopse
+        self.sinopse = sinopse
 
 
         self.elenco = elenco
@@ -359,7 +359,18 @@ class Review:
 class Configuracoes:
 
 
-    def __init__(self):
+    def __init__(self, tema, idioma, email, texto_de_politica_de_privacidade, texto_de_politica_de_cookies):
 
 
-        pass
+        self.tema = tema
+
+        self.idioma = idioma
+
+
+        self.email = email
+
+        self.texto_de_politica_de_privacidade =  texto_de_politica_de_privacidade
+
+
+        self.texto_de_politica_de_cookies = texto_de_politica_de_cookies
+
