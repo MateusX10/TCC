@@ -68,9 +68,9 @@ class Usuario:
 class Cliente(Usuario):
 
 
-    def __init__(self):
+    def __init__(self, id, nome, email, senha, data_nascimento, genero):
 
-        super().__init__()
+        super().__init__(id, nome, email, senha, data_nascimento, genero)
 
 
 
@@ -79,10 +79,10 @@ class Cliente(Usuario):
 class Administrador(Usuario):
 
 
-    def __init__(self):
+    def __init__(self, id, nome, email, senha, data_nascimento, genero):
 
 
-        super().__init__()
+        super().__init__(id, nome, email, senha, data_nascimento, genero)
 
 
     def gerenciar_usuarios(self):
@@ -359,15 +359,15 @@ class Review:
 class Configuracoes:
 
 
-    def __init__(self, tema, idioma, email, texto_de_politica_de_privacidade, texto_de_politica_de_cookies):
+    def __init__(self, tema_do_sistema, idioma_do_sistema, email_do_usuario, texto_de_politica_de_privacidade, texto_de_politica_de_cookies):
 
 
-        self.tema = tema
+        self.tema_do_sistema = tema_do_sistema
 
-        self.idioma = idioma
+        self.idioma_do_sistema = idioma_do_sistema
 
 
-        self.email = email
+        self.email_do_usuario = email_do_usuario
 
         self.texto_de_politica_de_privacidade =  texto_de_politica_de_privacidade
 
