@@ -7,7 +7,12 @@ class Interface:
 
 class Usuario:
 
+
+
     def __init__(self, id, nome, email, senha, data_nascimento, genero):
+
+        from random import randint
+
 
         self.id = id
 
@@ -20,6 +25,9 @@ class Usuario:
         self.data_nascimento = data_nascimento
 
         self.genero = genero
+
+        self.perfil = Perfil(self.id, randint(0, 10000), ["Os vingadores: guerra infinita", "Friends", "O Poderoso Chefão"], ["O Labirinto do Fauno", "The Crown", "Black Mirror"], ["Rei Leão", "Sherlock", "Madagascar"], ["ação", "comédia", "sci-fi"], ["Os Vingadores: Guerra Infinita"])
+ 
 
 
     
