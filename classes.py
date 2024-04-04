@@ -5,6 +5,74 @@ class Interface:
         pass
 
 
+
+
+class Perfil:
+
+
+    def __init__(self, id_perfil, id_usuario,  generos_preferidos):
+
+        self.id_perfil = id_perfil
+
+        self.id_usuario = id_usuario
+
+        self.filmes_assistidos = []
+
+        self.filmes_assistindo = []
+
+
+        self.filmes_a_assistir = []
+
+        self.series_assistidas = []
+
+        self.series_assistindo = []
+
+        self.series_a_assistir = []
+
+        self.filmes_preferidos = []
+
+
+        self.series_preferidas = []
+
+        self.generos_preferidos = generos_preferidos
+
+
+
+
+    def adicionar_filme_assistido(self, filme_assistido):
+
+        self.filmes_assistidos.append(filme_assistido)
+
+
+    def adicionar_filme_assistindo(self, filme_assistindo):
+
+        self.filmes_assistindo.append(filme_assistindo)
+
+
+    def adicionar_filme_a_assistir(self, filme_a_assistir):
+
+        self.filmes_a_assistir.append(filme_a_assistir)
+
+
+    def adicionar_serie_assistida(self, serie_assistida):
+
+
+        self.series_assistidas.append(serie_assistida)
+
+
+    def adicionar_serie_assistindo(self, serie_assistindo):
+
+        self.series_assistindo.append(serie_assistindo)
+
+
+    def adicionar_serie_a_assistir(self, serie_a_assistir):
+
+
+        self.series_a_assistir.append(serie_a_assistir)
+
+
+
+
 class Usuario:
 
 
@@ -26,7 +94,7 @@ class Usuario:
 
         self.genero = genero
 
-        self.perfil = Perfil(self.id, randint(0, 10000), ["Os vingadores: guerra infinita", "Friends", "O Poderoso Chefão"], ["O Labirinto do Fauno", "The Crown", "Black Mirror"], ["Rei Leão", "Sherlock", "Madagascar"], ["ação", "comédia", "sci-fi"], ["Os Vingadores: Guerra Infinita"])
+        self.perfil = Perfil(self.id, randint(0, 10000), ["ação", "aventura", "comédia"])
  
 
 
@@ -113,24 +181,7 @@ class Administrador(Usuario):
 
 
 
-class Perfil:
 
-
-    def __init__(self, id_perfil, id_usuario,  obras_assistidas, obras_assistindo, obras_a_assistir, generos_preferidos, obras_preferidas):
-
-        self.id_perfil = id_perfil
-
-        self.id_usuario = id_usuario
-
-        self.obras_assistidas = obras_assistidas
-
-        self.obras_assistindo = obras_assistindo
-
-        self.obras_a_assistir = obras_a_assistir
-
-        self.generos_preferidos = generos_preferidos
-
-        self.obras_preferidas = obras_preferidas
 
 
 
@@ -159,17 +210,17 @@ class Perfil:
 
 
 
-class Filmes:
+class Filme:
 
 
-    def __init__(self, id, titulo, genero, diretor, ano_lancamento, sinopse, elenco, classificacao, duracao, average_rate, popularidade, link_trailer, poster):
+    def __init__(self, id, titulo, generos: list, diretor: list, ano_lancamento, sinopse, elenco: list, classificacao, duracao, average_rate, popularidade, link_trailer, poster):
 
 
         self.id = id
 
         self.titulo = titulo
 
-        self.genero = genero
+        self.generos = generos
 
 
         self.diretor = diretor
@@ -218,7 +269,7 @@ class Filmes:
 
 class Series:
 
-    def __init__(self, id, titulo, genero, numero_episidios, numero_temporadas, ano_lancamento, diretor, sinopse, elenco, classificacao, duracao, average_rate, popularidade, link_trailer, poster):
+    def __init__(self, id, titulo, generos: list, numero_episidios, numero_temporadas, ano_lancamento, diretor: list, sinopse, elenco: list, classificacao, duracao, average_rate, popularidade, link_trailer, poster):
 
 
         self.id = id
@@ -227,7 +278,7 @@ class Series:
         self.titulo = titulo
 
 
-        self.genero = genero
+        self.generos = generos
 
 
         self.numero_episodio = numero_episidios
