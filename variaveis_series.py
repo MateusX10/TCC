@@ -11,7 +11,7 @@ numero_temporadas_serie1 = 5
 
 numero_episodios_serie1 = 41
 
-ano_lancamento_filme1 = 2017
+ano_lancamento_serie1 = 2017
 
 diretores_serie1 = ["Álex Pina", "Jesús Colmenar", "Alejandro Bazzano", "Miguel Ángel Vivas","Koldo Serra"]
 
@@ -179,7 +179,7 @@ elenco_serie7 = [
     "Andrew Scott", "Louise Brealey", "Amanda Abbington", "Sian Brooke", "Jonathan Aris"
 ]
 classificacao_serie7 = "14 anos"
-duracao_media_episodio_serie10 = "90 minutos"
+duracao_media_episodio_serie7 = "90 minutos"
 average_rate_serie7 = 9.1
 popularidade_serie7 = "8º"
 link_trailer_serie7 = "https://www.youtube.com/watch?v=qlcWFoNqZHc"
@@ -207,11 +207,11 @@ poster_serie8 = "imagens/the_crown_poster.png"
 
 # Série 9
 id_serie9 = 9
-nome_serie8 = "Black Mirror"
-generos_serie8 = ["Drama", "Ficção Científica", "Thriller"]
-numero_temporadas_serie8 = 5
-numero_episodios_serie8 = 22
-ano_lancamento_serie8 = 2011
+nome_serie9 = "Black Mirror"
+generos_serie9 = ["Drama", "Ficção Científica", "Thriller"]
+numero_temporadas_serie9 = 5
+numero_episodios_serie9 = 22
+ano_lancamento_serie9 = 2011
 diretores_serie9 = ["Charlie Brooker"]
 sinopse_serie9= '''Cada episódio autônomo de "Black Mirror" explora um aspecto sombrio e distorcido da sociedade moderna, examinando as consequências imprevistas do avanço tecnológico.'''
 elenco_serie9 = [
@@ -223,7 +223,7 @@ duracao_media_episodio_serie9 = "60 minutos"
 average_rate_serie9 = 8.8
 popularidade_serie9 = "10º"
 link_trailer_serie9 = "https://www.youtube.com/watch?v=jDiYGjp5iFg"
-poster_serie12 = "imagens/black_mirror_poster.png"
+poster_serie9 = "imagens/black_mirror_poster.png"
 
 
 
