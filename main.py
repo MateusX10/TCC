@@ -1,5 +1,6 @@
 from classes import *
 from variaveis_filmes import *
+from variaveis_series import *
 from objetos import *
 
 
