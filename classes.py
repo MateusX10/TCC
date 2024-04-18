@@ -2,7 +2,27 @@ class Interface:
 
     def __init__(self):
 
-        pass
+
+        # elementos a serem inseridos na interface.Os elementos a serem inseridos na interface podem ser: configuracao (apenas uma), administradores, clientes, perfis, filmes ou séries (comentários e reviews já estão contidos em filmes e séries e, logo, são excluidos)
+        self.elementos = {"configuração": [], "administradores": [], "clientes": [],  "filmes": [], "series": []}
+
+
+    def adicionar_elemento(self, tipo_de_elemento, elemento)-> None:
+        '''-> Adiciona um elemento à interface
+
+            Parâmetros:
+
+                tipo_de_elemento(str): o tipo de elemento a ser adicionado (filme, série, administrador, cliente, filmes, series)
+                return: sem retorno
+
+
+            Tipos de elemento:
+
+                - configuração, administradores, clientes, perfis, filmes, series
+        '''
+
+        
+        self.elementos[tipo_de_elemento].append(elemento)
 
 
 
@@ -98,7 +118,7 @@ class Usuario:
  
 
 
-    
+  
     def cadastrar(self):
 
         pass
@@ -246,11 +266,24 @@ class Filme:
 
         self.poster = poster
 
+        self.comentarios = []
+
+        self.reviews = []
+
 
     # método "get_informacoes"
     def __str__(self):
 
         pass
+
+
+    def adicionar_comentario(self, id_comentario, id_usuario, id_obra,  comentario, data_comentario):
+
+        id_obra = self.id
+
+        comentario = Comentarios(id_comentario, id_usuario, id_obra, comentario, data_comentario)
+
+        self.adicionar_comentario(comentario)
 
 
     def get_comentarios(self):
@@ -279,7 +312,7 @@ class Series:
 
 
         self.generos = generos
-
+    
 
         self.numero_episodio = numero_episidios
 
@@ -310,6 +343,10 @@ class Series:
         self.link_trailer = link_trailer
 
         self.poster = poster
+
+        self.comentarios = []
+
+        self.reviews = []
 
 
     # método "get_informacoes"
@@ -418,7 +455,7 @@ class Review:
 class Configuracoes:
 
 
-    def __init__(self, tema_do_sistema, idioma_do_sistema, email_do_usuario, texto_de_politica_de_privacidade, texto_de_politica_de_cookies):
+    def __init__(self, tema_do_sistema, idioma_do_sistema, email_do_usuario, texto_de_politica_de_privacidade):
 
 
         self.tema_do_sistema = tema_do_sistema
@@ -431,5 +468,4 @@ class Configuracoes:
         self.texto_de_politica_de_privacidade =  texto_de_politica_de_privacidade
 
 
-        self.texto_de_politica_de_cookies = texto_de_politica_de_cookies
 

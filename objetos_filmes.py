@@ -1,5 +1,4 @@
 from variaveis_filmes import *
-from variaveis_configuracoes import *
 
 
 filme1 =   Filme(id_filme1, nome_filme1, generos_filme1, ano_lancamento_filme1, diretores_filme1, sinopse_filme1, elenco_filme1, classificacao_filme1, duracao_filme1, average_rate_filme1, popularidade_filme1, link_trailer_filme1, poster_filme1)
@@ -36,9 +35,6 @@ filme12 = Filme(id_filme12, nome_filme12, generos_filme12, ano_lancamento_filme1
 filme13 = Filme(id_filme13, nome_filme13, generos_filme13, ano_lancamento_filme13, diretores_filme13, sinopse_filme13, elenco_filme13, classificacao_filme13, duracao_filme13, average_rate_filme13, popularidade_filme13, link_trailer_filme13, poster_filme13)
 
 
-
-
-
 filme14 = Filme(id_filme14, nome_filme14, generos_filme14, ano_lancamento_filme14, diretores_filme14, sinopse_filme14, elenco_filme14, classificacao_filme14, duracao_filme14, average_rate_filme14, popularidade_filme14, link_trailer_filme14, poster_filme14)
 
 
@@ -46,8 +42,3 @@ filme14 = Filme(id_filme14, nome_filme14, generos_filme14, ano_lancamento_filme1
 filme15 = Filme(id_filme15, nome_filme15, generos_filme15, ano_lancamento_filme15, diretores_filme15, sinopse_filme15, elenco_filme15, classificacao_filme15, duracao_filme15, average_rate_filme15, popularidade_filme15, link_trailer_filme15, poster_filme15)
 
 
-
-cliente1 = Cliente(1, "Pedro", "pedro@email.com", "jdjdhd89812", '09/12/2000', 'M')
-
-
-administrador1 = Administrador(1, "Roberto", "roberto@email.com", "dXjq93-1~]S/?", '12/03/1991', "M")

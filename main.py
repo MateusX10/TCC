@@ -1,7 +1,13 @@
 from classes import *
 from variaveis_filmes import *
 from variaveis_series import *
-from objetos import *
+from objetos_filmes import *
+from objetos_series import *
+from objetos_usuarios import *
+from variaveis_comentarios import *
+from objetos_comentarios import *
+from objetos_reviews import *
+from objetos_configuracoes import *
 
 
 # filmes assistidos pelo cliente1
@@ -32,6 +38,45 @@ cliente1.perfil.adicionar_filme_a_assistir(filme4)
 
 
 cliente1.perfil.adicionar_filme_a_assistir(filme7)
+
+
+
+# series assistidas pelo cliente
+
+cliente1.perfil.adicionar_serie_assistida(serie1)
+
+cliente1.perfil.adicionar_serie_assistida(serie9)
+
+
+cliente1.perfil.adicionar_serie_assistida(serie6)
+
+lista_series_assistidas_cliente1 = cliente1.perfil.series_assistidas
+
+
+# serie que cliente está assistindo
+
+cliente1.perfil.adicionar_serie_assistindo(serie4)
+
+
+cliente1.perfil.adicionar_serie_assistindo(serie7)
+
+cliente1.perfil.adicionar_serie_assistindo(serie8)
+
+
+lista_series_assistindo_cliente1 = cliente1.perfil.series_assistindo
+
+
+# serie que cliente planeja assistir
+cliente1.perfil.adicionar_serie_a_assistir(serie2)
+
+cliente1.perfil.adicionar_serie_a_assistir(serie3)
+
+cliente1.perfil.adicionar_serie_a_assistir(serie5)
+
+
+lista_series_planeja_assistir = cliente1.perfil.series_a_assistir
+
+
 
 
 # filmes assistidos pelo administrador1
@@ -124,6 +169,38 @@ for posicao, filme in enumerate(lista_filmes_a_assistir_cliente1):
 
 
 
+# séries que cliente assistiu
+
+print("\n\033[1;33m- Séries assistidas \033[m")
+
+for posicao, serie in enumerate(lista_series_assistidas_cliente1):
+
+
+    print(f"{posicao + 1} - {serie.titulo}")
+
+
+# séries que o cliente está assistindo
+
+print("\n\033[1;33m- Séries assistindo\033[m")
+
+
+for posicao, serie in enumerate(lista_series_assistindo_cliente1):
+
+    print(f"{posicao + 1} - {serie.titulo}")
+
+
+# Séries que o cliente planeja assistir
+
+
+print("\n\033[1;33m- Séries que o cliente planeja assistir")
+
+for posicao, serie in enumerate(lista_series_planeja_assistir):
+
+    print(f"{posicao + 1} - {serie.titulo}")
+
+
+
+
 
 # <<< Administrador >>>
 
@@ -160,3 +237,47 @@ for posicao, filme in enumerate(lista_filmes_a_assistir_administrador1):
 
 
     print(f"{posicao + 1} - {filme.titulo}")
+
+
+
+
+
+# comentários
+
+lista_comentario = [comentario1, comentario2, comentario3]
+
+
+print("\n\033[1;32m<<< comentários >>>\033[m")
+
+for posicao, comentario in enumerate(lista_comentario):
+
+    print(f"Comentario {posicao + 1} -> {comentario.comentario}")
+
+
+
+# reviews
+
+lista_reviews = [review1, review2, review3]
+
+
+for posica, review in enumerate(lista_reviews):
+
+    print(f"{posicao + 1} - {review.review}")
+
+
+
+filme1.adicionar_comentario(comentario1)
+
+filme2.adicionar_comentario(comentario2)
+
+serie1.adicionar_comentario(comentario3)
+
+
+filme5.adicionar_review(review1)
+
+filme8.adicionar_review(review2)
+
+serie4.adicionar_review(review3)
+
+
+
